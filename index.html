@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/
+	jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Hover In&Out</title>
+
+	<script>
+		$('document').ready(function(){
+
+			$('.container img').hover(function(){
+				var new_image = $(this).attr('data-alt-src');
+				var orig = $(this).attr('src');
+				$(this).attr('data-alt-src',orig);
+				$(this).attr('src',new_image);
+			},function(){
+				var orig = $(this).attr('data-alt-src');
+				var new_image = $(this).attr('src');
+				$(this).attr('data-alt-src', new_image);
+				$(this).attr('src',orig);
+			})
+
+
+			// $('p, h3, li').hover(function(){
+			// 	$(this).css('color', 'white');
+			// }, function(){
+			// 	$(this).css('color', 'black');
+			// })
+
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<img src="img/cat0.jfif" data-alt-src="img/dog0.jpg">
+		<img src="img/cat1.jpg" data-alt-src="img/dog0.jpg">
+		<img src="img/cat2.jpg" data-alt-src="img/dog0.jpg">
+		<img src="img/cat3.jpg" data-alt-src="img/dog0.jpg">
+
+	</div>
+</body>
+</html>

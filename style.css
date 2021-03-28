@@ -1,0 +1,18 @@
+body{
+	padding: 20px;
+}
+
+.container{
+	width: 440px;
+	height: 800px;
+	margin: auto;
+	/*outline: solid gray;*/
+	margin-top: 50px;
+}
+
+.container img{
+	width: 193px;
+	height: 200px;
+	border: solid gray;
+
+}
